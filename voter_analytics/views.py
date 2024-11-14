@@ -32,3 +32,8 @@ class VoterListView(ListView):
         context = super().get_context_data(**kwargs)
         context['form'] = VoterFilterForm(self.request.GET)
         return context
+    
+class VoterDetailView(DetailView):
+    model = Voter
+    template_name = 'voter_analytics/voter_detail.html'
+    context_object_name = 'voter'
