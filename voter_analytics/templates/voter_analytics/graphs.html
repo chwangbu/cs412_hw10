@@ -1,0 +1,17 @@
+<h1>Voter Data Graphs</h1>
+
+<form method="get">
+    {{ form.as_p }}
+    <button type="submit">Filter</button>
+</form>
+
+<h2>Year of Birth Distribution</h2>
+<div>{{ year_birth_histogram|safe }}</div>
+
+<h2>Party Affiliation Distribution</h2>
+<div>{{ party_affiliation_pie|safe }}</div>
+
+<h2>Election Participation</h2>
+<div>{{ election_participation_histogram|safe }}</div>
+
+<p><a href="{% url 'voters' %}">Back to Voter List</a></p>
