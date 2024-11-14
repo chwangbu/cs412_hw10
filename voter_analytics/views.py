@@ -2,11 +2,12 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Voter
 from .forms import VoterFilterForm
-from django.db.models import Q, Count
+from django.db.models import Q
 from django.db.models.functions import ExtractYear
 import plotly.express as px
 import plotly.io as pio
 from django.utils.safestring import mark_safe
+from django.db.models import Count
 
 # Create your views here.
 class VoterListView(ListView):
